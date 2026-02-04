@@ -3,36 +3,481 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Форма имени</title>
+    <title>Настройка и сопровождение рекламы — GrowthLine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f6fb;
+        --ink: #0f172a;
+        --muted: #475569;
+        --brand: #4f46e5;
+        --brand-strong: #4338ca;
+        --accent: #22c55e;
+        --card: #ffffff;
+        --line: rgba(15, 23, 42, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
-        margin: 40px;
-        font-family: Arial, sans-serif;
-        color: #111827;
+        font-family: "Manrope", sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
       }
 
-      label {
-        display: block;
-        margin-bottom: 8px;
+      .container {
+        width: min(1120px, 90vw);
+        margin: 0 auto;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(79, 70, 229, 0.12);
+        color: var(--brand-strong);
         font-weight: 600;
+        font-size: 14px;
       }
 
-      input {
-        display: block;
-        margin-bottom: 16px;
-        padding: 10px 12px;
-        font-size: 16px;
-        width: 280px;
+      header {
+        padding: 28px 0 10px;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: var(--brand-strong);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .hero {
+        padding: 60px 0 80px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        align-items: center;
+        gap: 48px;
+      }
+
+      .hero h1 {
+        font-size: clamp(32px, 4vw, 52px);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin: 18px 0;
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .btn {
+        padding: 14px 24px;
+        border-radius: 14px;
+        border: none;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .btn-primary {
+        background: var(--brand);
+        color: #fff;
+        box-shadow: 0 12px 24px rgba(79, 70, 229, 0.3);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-ghost {
+        background: #fff;
+        color: var(--brand-strong);
+        border: 1px solid rgba(79, 70, 229, 0.2);
+      }
+
+      .hero-card {
+        background: var(--card);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .metric {
+        padding: 16px;
+        border-radius: 16px;
+        background: rgba(79, 70, 229, 0.08);
+      }
+
+      .metric strong {
+        font-size: 22px;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(28px, 3vw, 38px);
+        margin-bottom: 12px;
+      }
+
+      .section-title p {
+        color: var(--muted);
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+      }
+
+      .card {
+        background: var(--card);
+        padding: 24px;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+      }
+
+      .card h3 {
+        margin: 16px 0 8px;
+        font-size: 20px;
+      }
+
+      .tag {
+        display: inline-flex;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.12);
+        color: #15803d;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+
+      .step {
+        padding: 20px;
+        border-radius: 18px;
+        background: #fff;
+        border: 1px solid var(--line);
+      }
+
+      .step span {
+        font-weight: 800;
+        color: var(--brand);
+        font-size: 18px;
+      }
+
+      .cta {
+        background: linear-gradient(120deg, #4f46e5, #6366f1);
+        border-radius: 32px;
+        padding: 48px;
+        color: #fff;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        align-items: center;
+        gap: 24px;
+      }
+
+      .cta p {
+        opacity: 0.9;
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 32px;
+        align-items: start;
+      }
+
+      form {
+        display: grid;
+        gap: 14px;
+      }
+
+      input,
+      textarea {
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        font-size: 15px;
+        font-family: inherit;
+        background: #fff;
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      footer {
+        padding: 32px 0 48px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 720px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .cta {
+          padding: 32px;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <label for="first-name">Имя</label>
-      <input id="first-name" name="first-name" type="text" />
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">GrowthLine</div>
+          <div class="nav-links">
+            <a href="#services">Услуги</a>
+            <a href="#process">Процесс</a>
+            <a href="#cases">Кейсы</a>
+            <a href="#contact">Контакты</a>
+          </div>
+          <button class="btn btn-ghost">Запросить аудит</button>
+        </nav>
+      </div>
+    </header>
 
-      <label for="last-name">Фамилия</label>
-      <input id="last-name" name="last-name" type="text" />
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="pill">Эксперты по performance-маркетингу</span>
+            <h1>Настройка и сопровождение рекламы, которая растит продажи</h1>
+            <p>
+              Берем на себя запуск, оптимизацию и ежедневный контроль рекламных кампаний. Вы видите
+              прозрачную аналитику и стабильный рост заявок.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary">Получить стратегию</button>
+              <button class="btn btn-ghost">Посмотреть медиаплан</button>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="tag">За 14 дней</div>
+            <h3>Старт рекламной системы под ваш бизнес</h3>
+            <p>
+              Настроим каналы, которые работают: поиск, соцсети, ретаргетинг, маркетплейсы.
+              Сформируем прогноз и KPI под вашу воронку.
+            </p>
+            <div class="metrics">
+              <div class="metric">
+                <strong>+38%</strong>
+                <div>рост заявок</div>
+              </div>
+              <div class="metric">
+                <strong>до 24ч</strong>
+                <div>реакция команды</div>
+              </div>
+              <div class="metric">
+                <strong>0 ₽</strong>
+                <div>за перенос аккаунта</div>
+              </div>
+              <div class="metric">
+                <strong>4.9</strong>
+                <div>оценка клиентов</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Комплексное сопровождение рекламы</h2>
+            <p>От брифа до отчетов — настраиваем, оптимизируем и масштабируем кампании.</p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <span class="tag">Стратегия</span>
+              <h3>Аудит и медиаплан</h3>
+              <p>Анализируем конкурентов, каналы и готовим план размещений с прогнозом ROMI.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Запуск</span>
+              <h3>Настройка рекламных кабинетов</h3>
+              <p>Собираем семантику, готовим креативы, подключаем аналитику и цели.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Оптимизация</span>
+              <h3>Ежедневное ведение</h3>
+              <p>Управляем ставками, тестируем гипотезы и улучшаем стоимость лида.</p>
+            </article>
+            <article class="card">
+              <span class="tag">Отчетность</span>
+              <h3>Прозрачные дашборды</h3>
+              <p>Онлайн-отчеты в Power BI и Google Looker Studio с доступом 24/7.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Как мы работаем</h2>
+            <p>Прозрачный процесс, чтобы вы понимали, что происходит с рекламой на каждом шаге.</p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <span>01</span>
+              <h3>Бриф и цели</h3>
+              <p>Погружаемся в бизнес, формируем KPI и ключевые метрики.</p>
+            </div>
+            <div class="step">
+              <span>02</span>
+              <h3>Стратегия</h3>
+              <p>Подбираем каналы и готовим медиаплан с прогнозом результатов.</p>
+            </div>
+            <div class="step">
+              <span>03</span>
+              <h3>Запуск</h3>
+              <p>Настраиваем кампании, пиксели, сквозную аналитику и цели.</p>
+            </div>
+            <div class="step">
+              <span>04</span>
+              <h3>Сопровождение</h3>
+              <p>Оптимизируем объявления и масштабируем то, что приносит рост.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cases" class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Результаты клиентов</h2>
+            <p>Несколько цифр, чтобы почувствовать масштаб и эффективность работы.</p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Сеть клиник</h3>
+              <p>Снизили стоимость лида на 28% и увеличили поток заявок на 41%.</p>
+            </article>
+            <article class="card">
+              <h3>EdTech проект</h3>
+              <p>Настроили автоворонки и увеличили конверсию в оплату на 19%.</p>
+            </article>
+            <article class="card">
+              <h3>Маркетплейс</h3>
+              <p>Подключили товарные кампании и увеличили продажи на 56% за 2 месяца.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta">
+            <div>
+              <h2>Готовы усилить рекламные каналы?</h2>
+              <p>Оставьте заявку и получите персональный план роста с расчетом бюджета.</p>
+            </div>
+            <button class="btn btn-primary">Получить консультацию</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact">
+          <div>
+            <h2>Свяжитесь с нами</h2>
+            <p>
+              Расскажите о проекте, а мы подготовим предложение в течение одного рабочего дня.
+            </p>
+            <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+            <p><strong>Email:</strong> hello@growthline.agency</p>
+            <p><strong>Адрес:</strong> Москва, Пресненская набережная, 12</p>
+          </div>
+          <form>
+            <input type="text" name="name" placeholder="Ваше имя" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="text" name="company" placeholder="Компания" />
+            <textarea name="message" placeholder="Коротко опишите задачу"></textarea>
+            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2024 GrowthLine. Настройка и сопровождение рекламы.</p>
+      </div>
+    </footer>
   </body>
 </html>
