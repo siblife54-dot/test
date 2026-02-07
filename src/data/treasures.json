@@ -1,0 +1,146 @@
+[
+  {
+    "id": "item-1",
+    "name": "Шлем из ведра",
+    "type": "item",
+    "bonus": 1,
+    "goldValue": 100,
+    "description": "+1 к силе, слегка пахнет супом."
+  },
+  {
+    "id": "item-2",
+    "name": "Ржавая сабля",
+    "type": "item",
+    "bonus": 2,
+    "goldValue": 300,
+    "description": "+2 к силе, скрипит при ударе."
+  },
+  {
+    "id": "item-3",
+    "name": "Плащ-полотенце",
+    "type": "item",
+    "bonus": 1,
+    "goldValue": 200,
+    "description": "+1 к силе, согревает в коридорах."
+  },
+  {
+    "id": "item-4",
+    "name": "Сандалии скорости",
+    "type": "item",
+    "bonus": 2,
+    "goldValue": 400,
+    "description": "+2 к силе, быстрые шаги."
+  },
+  {
+    "id": "item-5",
+    "name": "Щит-сковородка",
+    "type": "item",
+    "bonus": 3,
+    "goldValue": 500,
+    "description": "+3 к силе, отражает и жарит."
+  },
+  {
+    "id": "item-6",
+    "name": "Кольцо дребезга",
+    "type": "item",
+    "bonus": 1,
+    "goldValue": 150,
+    "description": "+1 к силе, звенит на каждом шаге."
+  },
+  {
+    "id": "one-shot-1",
+    "name": "Банка храбрости",
+    "type": "one-shot",
+    "bonus": 3,
+    "goldValue": 200,
+    "description": "+3 в бою, одноразово."
+  },
+  {
+    "id": "one-shot-2",
+    "name": "Громкий свист",
+    "type": "one-shot",
+    "bonus": 2,
+    "goldValue": 100,
+    "description": "+2 в бою, пугает монстров."
+  },
+  {
+    "id": "one-shot-3",
+    "name": "Сеть ловца",
+    "type": "one-shot",
+    "bonus": 4,
+    "goldValue": 300,
+    "description": "+4 в бою, разовая."
+  },
+  {
+    "id": "one-shot-4",
+    "name": "Перец в глаза",
+    "type": "one-shot",
+    "bonus": 1,
+    "goldValue": 50,
+    "description": "+1 в бою, монстр чихает."
+  },
+  {
+    "id": "one-shot-5",
+    "name": "Крепкий чай",
+    "type": "one-shot",
+    "bonus": 2,
+    "goldValue": 120,
+    "description": "+2 в бою, бодрит."
+  },
+  {
+    "id": "one-shot-6",
+    "name": "Фейерверк",
+    "type": "one-shot",
+    "bonus": 5,
+    "goldValue": 400,
+    "description": "+5 в бою, громко!"
+  },
+  {
+    "id": "item-7",
+    "name": "Пояс с карманами",
+    "type": "item",
+    "bonus": 1,
+    "goldValue": 180,
+    "description": "+1 к силе, всё под рукой."
+  },
+  {
+    "id": "item-8",
+    "name": "Очки наблюдателя",
+    "type": "item",
+    "bonus": 2,
+    "goldValue": 260,
+    "description": "+2 к силе, видит слабости."
+  },
+  {
+    "id": "item-9",
+    "name": "Плечи грузчика",
+    "type": "item",
+    "bonus": 2,
+    "goldValue": 220,
+    "description": "+2 к силе, можно носить всё."
+  },
+  {
+    "id": "item-10",
+    "name": "Штаны устойчивости",
+    "type": "item",
+    "bonus": 1,
+    "goldValue": 130,
+    "description": "+1 к силе, меньше скользит."
+  },
+  {
+    "id": "item-11",
+    "name": "Сапоги шума",
+    "type": "item",
+    "bonus": 1,
+    "goldValue": 110,
+    "description": "+1 к силе, но монстры слышат."
+  },
+  {
+    "id": "item-12",
+    "name": "Перчатки хватки",
+    "type": "item",
+    "bonus": 2,
+    "goldValue": 240,
+    "description": "+2 к силе, крепко держит."
+  }
+]
