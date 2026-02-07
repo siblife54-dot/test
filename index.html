@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Munchkin-like</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Mini Munchkin-like</h1>
+    <div class="header-actions">
+      <button id="newGameBtn" class="secondary">Новая игра</button>
+      <button id="resetSaveBtn" class="secondary">Сбросить сохранение</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="startScreen" class="card">
+      <h2>Старт игры</h2>
+      <p>Введите имена от 2 до 4 игроков.</p>
+      <div class="player-inputs">
+        <input type="text" placeholder="Игрок 1" />
+        <input type="text" placeholder="Игрок 2" />
+        <input type="text" placeholder="Игрок 3" />
+        <input type="text" placeholder="Игрок 4" />
+      </div>
+      <button id="startGameBtn" class="primary">Начать</button>
+    </section>
+
+    <section id="gameScreen" class="hidden">
+      <div class="layout">
+        <aside class="players-panel card">
+          <h2>Игроки</h2>
+          <ul id="playersList"></ul>
+          <button id="endTurnBtn" class="secondary">Конец хода</button>
+        </aside>
+
+        <section class="center-panel">
+          <div class="actions">
+            <button id="openDoorBtn" class="primary">Открыть дверь</button>
+            <button id="handBtn" class="secondary">Рука</button>
+            <button id="equipBtn" class="secondary">Экипировка</button>
+            <button id="logBtn" class="secondary">Лог</button>
+          </div>
+          <div id="eventCard" class="card event-card">
+            <h2>Событие</h2>
+            <p>Нажмите «Открыть дверь», чтобы начать ход.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="modalOverlay" class="modal-overlay hidden"></div>
+
+  <div id="combatModal" class="modal hidden" role="dialog" aria-modal="true">
+    <header>
+      <h2>Бой</h2>
+      <button class="close" data-close="combatModal">×</button>
+    </header>
+    <div class="modal-body" id="combatBody"></div>
+  </div>
+
+  <div id="handModal" class="modal hidden" role="dialog" aria-modal="true">
+    <header>
+      <h2>Рука</h2>
+      <button class="close" data-close="handModal">×</button>
+    </header>
+    <div class="modal-body" id="handBody"></div>
+  </div>
+
+  <div id="equipModal" class="modal hidden" role="dialog" aria-modal="true">
+    <header>
+      <h2>Экипировка</h2>
+      <button class="close" data-close="equipModal">×</button>
+    </header>
+    <div class="modal-body" id="equipBody"></div>
+  </div>
+
+  <div id="logModal" class="modal hidden" role="dialog" aria-modal="true">
+    <header>
+      <h2>Лог</h2>
+      <button class="close" data-close="logModal">×</button>
+    </header>
+    <div class="modal-body" id="logBody"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
