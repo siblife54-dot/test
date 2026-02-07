@@ -1,0 +1,164 @@
+[
+  {
+    "id": "monster-1",
+    "name": "Пещерный гоблин",
+    "type": "monster",
+    "power": 3,
+    "rewardLevels": 1,
+    "rewardTreasures": 1,
+    "badStuff": "Теряешь 1 уровень.",
+    "badStuffEffect": { "type": "loseLevel", "amount": 1 }
+  },
+  {
+    "id": "monster-2",
+    "name": "Дымный слизень",
+    "type": "monster",
+    "power": 4,
+    "rewardLevels": 1,
+    "rewardTreasures": 1,
+    "badStuff": "Сбрасываешь один предмет.",
+    "badStuffEffect": { "type": "loseItem", "amount": 1 }
+  },
+  {
+    "id": "monster-3",
+    "name": "Скелет-страж",
+    "type": "monster",
+    "power": 5,
+    "rewardLevels": 1,
+    "rewardTreasures": 2,
+    "badStuff": "Теряешь 1 уровень.",
+    "badStuffEffect": { "type": "loseLevel", "amount": 1 }
+  },
+  {
+    "id": "monster-4",
+    "name": "Кухонный огр",
+    "type": "monster",
+    "power": 6,
+    "rewardLevels": 1,
+    "rewardTreasures": 2,
+    "badStuff": "Сбрасываешь один предмет.",
+    "badStuffEffect": { "type": "loseItem", "amount": 1 }
+  },
+  {
+    "id": "monster-5",
+    "name": "Грибной громила",
+    "type": "monster",
+    "power": 7,
+    "rewardLevels": 1,
+    "rewardTreasures": 2,
+    "badStuff": "Теряешь 2 уровня.",
+    "badStuffEffect": { "type": "loseLevel", "amount": 2 }
+  },
+  {
+    "id": "monster-6",
+    "name": "Шумный воришка",
+    "type": "monster",
+    "power": 4,
+    "rewardLevels": 1,
+    "rewardTreasures": 1,
+    "badStuff": "Сбрасываешь один предмет.",
+    "badStuffEffect": { "type": "loseItem", "amount": 1 }
+  },
+  {
+    "id": "monster-7",
+    "name": "Ледяной козлоног",
+    "type": "monster",
+    "power": 8,
+    "rewardLevels": 2,
+    "rewardTreasures": 2,
+    "badStuff": "Теряешь 1 уровень.",
+    "badStuffEffect": { "type": "loseLevel", "amount": 1 }
+  },
+  {
+    "id": "monster-8",
+    "name": "Туманный лорд",
+    "type": "monster",
+    "power": 9,
+    "rewardLevels": 2,
+    "rewardTreasures": 2,
+    "badStuff": "Сбрасываешь один предмет.",
+    "badStuffEffect": { "type": "loseItem", "amount": 1 }
+  },
+  {
+    "id": "monster-9",
+    "name": "Песчаный скакун",
+    "type": "monster",
+    "power": 5,
+    "rewardLevels": 1,
+    "rewardTreasures": 1,
+    "badStuff": "Теряешь 1 уровень.",
+    "badStuffEffect": { "type": "loseLevel", "amount": 1 }
+  },
+  {
+    "id": "monster-10",
+    "name": "Щетинистый крот",
+    "type": "monster",
+    "power": 6,
+    "rewardLevels": 1,
+    "rewardTreasures": 2,
+    "badStuff": "Сбрасываешь один предмет.",
+    "badStuffEffect": { "type": "loseItem", "amount": 1 }
+  },
+  {
+    "id": "monster-11",
+    "name": "Сонный великан",
+    "type": "monster",
+    "power": 10,
+    "rewardLevels": 2,
+    "rewardTreasures": 3,
+    "badStuff": "Теряешь 2 уровня.",
+    "badStuffEffect": { "type": "loseLevel", "amount": 2 }
+  },
+  {
+    "id": "monster-12",
+    "name": "Пыльный дракончик",
+    "type": "monster",
+    "power": 7,
+    "rewardLevels": 1,
+    "rewardTreasures": 2,
+    "badStuff": "Сбрасываешь один предмет.",
+    "badStuffEffect": { "type": "loseItem", "amount": 1 }
+  },
+  {
+    "id": "curse-1",
+    "name": "Проклятие спотыкания",
+    "type": "curse",
+    "curseEffect": { "type": "loseLevel", "amount": 1 },
+    "description": "Теряешь 1 уровень."
+  },
+  {
+    "id": "curse-2",
+    "name": "Проклятие липких рук",
+    "type": "curse",
+    "curseEffect": { "type": "loseItem", "amount": 1 },
+    "description": "Сбрасываешь один предмет."
+  },
+  {
+    "id": "curse-3",
+    "name": "Проклятие забывчивости",
+    "type": "curse",
+    "curseEffect": { "type": "loseLevel", "amount": 1 },
+    "description": "Теряешь 1 уровень."
+  },
+  {
+    "id": "curse-4",
+    "name": "Проклятие мокрой обуви",
+    "type": "curse",
+    "curseEffect": { "type": "loseItem", "amount": 1 },
+    "description": "Сбрасываешь один предмет."
+  },
+  {
+    "id": "curse-5",
+    "name": "Проклятие путаницы",
+    "type": "curse",
+    "curseEffect": { "type": "loseLevel", "amount": 1 },
+    "description": "Теряешь 1 уровень."
+  },
+  {
+    "id": "curse-6",
+    "name": "Проклятие тесного кармана",
+    "type": "curse",
+    "curseEffect": { "type": "loseItem", "amount": 1 },
+    "description": "Сбрасываешь один предмет."
+  }
+]
